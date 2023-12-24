@@ -36,3 +36,75 @@
     transform: rotate(360deg);
   }
 }
+
+/* Navbar.css */
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+}
+
+/* Logo */
+.logo img {
+  width: 100px; /* Adjust the width as needed */
+}
+
+/* Navigation links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Social icons */
+.social-icons a {
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+/* Hamburger menu */
+.hamburger-menu {
+  display: none; /* Hide by default on larger screens */
+  cursor: pointer;
+}
+
+/* Media query for responsive design */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide navigation links on smaller screens */
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 70px; /* Adjust the top positioning as needed */
+    left: 0;
+    background-color: #333;
+    z-index: 1;
+  }
+
+  .nav-links.active {
+    display: flex; /* Show navigation links when active */
+  }
+
+  .hamburger-menu {
+    display: block;    /* Show hamburger icon on smaller screens */
+  }
+}
